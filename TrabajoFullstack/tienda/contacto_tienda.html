@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/home_tienda.css">
+    <link rel="stylesheet" href="./assets/css/Contacto.css">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+ <nav class="navbar">
+        <p class="nombre-pagina">Nombre pagina</p>
+        <ul>
+            <li><a href="./home_tienda.html">Home</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="./contacto_tienda.html">Contacto</a></li>
+        </ul>
+        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</p>
+    </nav>
+
+        <article class="main-container">
+    
+            <div class="empresa-container">
+                <img src="https://images.unsplash.com/vector-1739891192763-8d96e834b532?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de la empresa">
+    
+                <h1>Nombre empresa</h1>
+            </div>
+    
+            <form class="formulario-contacto">
+                <h2>Formulario de contactos</h2>
+    
+                <label for="tipo-usuario">Nombre Usuario</label>
+                <span class="msg-error">Debe ingresar el nombre.</span>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+         
+                <label for="correo">correo</label>
+                <span class="msg-error msg-correo">Correo inválido: Debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.</span>
+                <input id="correo" type="email" name="correo" placeholder="Ej: pia@duoc.cl" required>
+    
+                <label for="password">Contenido</label>
+                <span class="msg-error msg-pass">solo se permite 600 caracteres.</span>
+                <textarea id="contenido" placeholder="Mensaje" class="contenido"></textarea>
+                
+    
+           
+    
+                <div class="btn-container">
+                <button type="submit">Enviar Mensaje</button>
+                </div>
+             </form>
+        </article>      
+
+   <div class="msg-toast">
+        <p>
+            el mensaje se ha enviado correctamente
+        </p>
+    </div>
+    <script src="./assets/js/registro_usuario.js"></script>
+</html>
