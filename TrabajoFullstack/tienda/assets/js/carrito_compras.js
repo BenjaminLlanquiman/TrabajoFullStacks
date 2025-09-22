@@ -11,7 +11,7 @@ if(peliculasCarrito === null) {
 // No es recomendado hacer esto (riesgo de XSS, por ej), pero por el fin academico del trabajo, se hace.
 const crearProdContainer = (id, titulo, descripcion, precio, imgSrc, imgAlt) => {
 
-    const plantillaProd = `<div class="producto-container producto-0${id}">
+    const plantillaProd = `<div class="producto-container producto-0${id}" data-id="${id - 1}">
                     <img src="${imgSrc}" alt="${imgAlt}">
 
                     <div class="descr-producto">
@@ -38,6 +38,25 @@ const crearProdContainer = (id, titulo, descripcion, precio, imgSrc, imgAlt) => 
     return plantillaProd
 }
 
+// Funcion para mostrar mensaje de carrito vacio.
+// Si al cargar la pagina no hay elementos en el carrito,
+// con este evento se muestra el mensaje del carrito vacio.
+
+const msgCarritoVacio = () => {
+    const pagMensajeCarritoVacio = document.querySelector(".pagina-carrito-vacio");
+    const totalPagoContainer = document.querySelector(".total-pago");
+    
+    if(peliculasCarrito.length === 0) {
+        pagMensajeCarritoVacio.style.display = "grid";
+        totalPagoContainer.style.display = "none";
+    } else {
+        pagMensajeCarritoVacio.style.display = "none";
+        totalPagoContainer.style.display = "block";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => msgCarritoVacio());
+
 const listaProdContainer = document.querySelector(".lista-productos");
 
 const costoFinalContainer = document.querySelector(".costo-final");
@@ -49,6 +68,9 @@ peliculasCarrito.forEach(
         listaProdContainer.insertAdjacentHTML("beforeend", producto);
     }
 );
+
+msgCarritoVacio(); // Se muestra el mensaje del carrito vacio si es que no hay elementos en el localStorage
+
 
 // Cantidad en el carrito del navbar.
 const actualizarCarritoNavbar = () => {
@@ -134,24 +156,33 @@ btnsResta.forEach(
 const btnsEliminar = document.querySelectorAll(".btn-eliminar-container button");
 
 btnsEliminar.forEach(
-    (btn, i) => {
+    (btn) => {
         btn.addEventListener(
             "click",
             () => {
-                peliculasCarrito.splice(i, 1);
-
                 // Se busca el ancestro más cercano del botón que tenga la clase 'producto-container'
                 const prodContainerMasCercano = btn.closest(".producto-container");
+
+                // Se obtiene el valor del 'data-id'
+                const indiceProdContainer = parseInt(prodContainerMasCercano.dataset.id); 
+
+                // Se elimina el producto del DOM
                 prodContainerMasCercano.remove();
 
-                // Se actualiza carrito
+                // Se elimina pelicula del array
+                peliculasCarrito.splice(indiceProdContainer, 1);
+
+                // Se actualiza carrito (localStorage)
                 localStorage.setItem("carritoProductos", JSON.stringify(peliculasCarrito));
+
+                // Se actualiza el costo total.
+                actualizarCostoTotal();
 
                 // Se actualiza contador del carrito
                 actualizarCarritoNavbar();
 
-                // Se actualiza el costo total.
-                actualizarCostoTotal();
+                 // Se muestra el mensaje del carrito vacio si es que no hay elementos en el localStorage
+                msgCarritoVacio();
             }
         );
     }

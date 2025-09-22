@@ -76,7 +76,7 @@ body {
 
 /* Main container */
 .main-container {
-    margin: 0 30px;
+    margin: 0 30px 90px;
 }
 
 .main-container h1 {
@@ -191,5 +191,46 @@ body {
     color: white;
     background-color: #02cf06;
     cursor: pointer;
+}
+
+
+/* Container de carrito vacio */
+.pagina-carrito-vacio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.texto-carrito-vacio {
+    background-color: #e8e8e8;
+    padding: 0 15px;
+}
+
+.texto-carrito-vacio h2 {
+    font-size: 32px;
+    margin: 50px 0;
+}
+
+.texto-carrito-vacio p {
+    margin: 0 0 50px 0;
+}
+
+.texto-carrito-vacio p, .texto-carrito-vacio a {
+    font-size: 19px;
+}
+
+.texto-carrito-vacio a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.texto-carrito-vacio a:hover {
+    border-bottom: 2px solid;
+    opacity: 0.8;
+}
+
+.pagina-carrito-vacio img {
+    width: 100%;
+    height: 100%;
 }
 
