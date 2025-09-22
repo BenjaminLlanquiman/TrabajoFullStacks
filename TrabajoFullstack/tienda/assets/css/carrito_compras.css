@@ -75,11 +75,22 @@ body {
 
 
 /* Main container */
+.main-container {
+    margin: 0 30px;
+}
+
+.main-container h1 {
+    margin: 0;
+    text-align: center;
+    margin: 90px 0;
+    font-size: 50px;
+}
 
 
 /* Carrito container */
 .carrito-container {
     display: flex;
+    column-gap: 30px;
 }
 
 .producto-container {
@@ -88,6 +99,7 @@ body {
     grid-template-rows: 250px;
     column-gap: 20px;
     background-color: #e8e8e8;
+    padding: 10px 15px;
 }
 
 .producto-container img {
@@ -96,13 +108,10 @@ body {
 }
 
 .producto-container:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-.total-pago {
-    flex-grow: 1;
-}
-
+/* Container descripcion del producto */
 .descr-producto {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -115,3 +124,72 @@ body {
 .descr-producto .descripcion {
     grid-area: 2 / 1 / 4 / 2;
 }
+
+.btn-eliminar-container button {
+    border: 0;
+    padding: 10px 40px;
+    font-weight: bold;
+    color: white;
+    background-color: #d2042d;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn-eliminar-container button:hover {
+    opacity: 0.8;
+}
+
+/* Precio producto */
+.precio-prod .precio {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Container cantidad del producto */
+.cantidad-container button {
+    border-radius: 30px;
+    padding: 2px 10px;
+    border: 0;
+    background-color: #042dd1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cantidad-container .num-cantidad {
+    text-align: center;
+}
+
+
+/* Container total pago */
+.total-pago {
+    flex-grow: 1;
+    background-color: #e8e8e8;
+}
+
+.total-pagar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.total-pagar p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.btn-pagar-container {
+    text-align: center;
+}
+
+.btn-pagar-container button {
+    width: stretch;
+    margin: 0 10px;
+    border: 0;
+    padding: 10px 40px;
+    font-weight: bold;
+    color: white;
+    background-color: #02cf06;
+    cursor: pointer;
+}
+
