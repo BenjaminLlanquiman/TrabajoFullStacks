@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* da el ancho del formulario*/
+.main-container {
+    margin: 0 30px;
+}
+
+/* da el espacioel nombre de la empresa y formulario*/
+.main-container h1 {
+    margin: 20px 0 0;
+}
+
+/* le da el tamaño ideal a la imagen */
+.main-container img {
+    width: 200px;
+    height: 200px;
+}
+
+/* da margen a la imagen de la empresa  */
+.empresa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.formulario-contacto {
+    margin: 0 220px 80px;
+    padding: 90px 120px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: -13px 9px 10px #cfcdcd; /* Crea efecto de sombra en contenedor del formulario */
+}
+
+.msg-error {
+    display: none;
+    visibility: hidden;
+    font-size: 14px;
+    color: #d2042d; 
+    margin-left: 5px;
+}
+
+/* le da tamaño, color y fondo a el nombre de formulario de contacto  */
+.formulario-contacto h2 {
+    text-align: center;
+    color: #f4f4f4;
+    margin: 0 0 50px 0;
+    background-color: #999999;
+    padding: 15px 0;
+}
+
+/* da el espacio entre bloque de texto*/
+.formulario-contacto input, .formulario-contacto label, .formulario-contacto select {
+    display: block;
+}
+
+/* da el largo de los bloque de texto*/
+.formulario-contacto input, .formulario-contacto select {
+    width: stretch;
+}
+
+/* da el ancho de los bloques de texto*/
+.formulario-contacto input {
+    padding: 20px 30px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+}
+.contenido {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 20px 30px;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+     resize: none;
+}
+
+
+/* retoca el tamaño de la letra dandole margen*/
+.formulario-contacto label {
+    margin: 40px 0 0 5px;
+    text-transform: uppercase;
+}
+
+/* centra el boton enviar mensaje*/
+.formulario-contacto .btn-container {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+/* boton de enviar mensaje*/
+.btn-container button {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding: 20px 50px;
+    background-color: #d2042d;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 0;
+    transition: background-color 0.3s ease-in;
+}
+
+/* Mensaje de exito (contenedor toast) */
+.msg-toast {
+    visibility: hidden;
+    position: fixed;
+    width: 20%;
+    padding: 20px 15px;
+    border: 2px solid #6d89f9;
+    border-radius: 10px;
+    color: white;
+    right: -33vw;
+    bottom: 5vh;
+    background-color: #042dd1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, right 0.2s ease-in-out;
+}
+
+.msg-toast p {
+    margin: 0;
+}
+
+.msg-toast p span {
+    font-weight: bold;
+}
+
+.exito {
+    visibility: visible;
+    right: 3vw;
+    opacity: 1;
+}
