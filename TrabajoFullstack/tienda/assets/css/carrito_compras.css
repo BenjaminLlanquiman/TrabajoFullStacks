@@ -234,3 +234,37 @@ body {
     height: 100%;
 }
 
+
+/* Mensaje de compra exitosa */
+.msg-pago-exitoso {
+    position: fixed;
+    width: 500px;
+}
+
+.msg-pago-exitoso h3 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.msg-pago-exitoso p {
+    margin: 0 0 0 0;
+}
+
+.msg-pago-exitoso::backdrop {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.msg-pago-exitoso .btn-cerrar-dialog {
+    text-align: center;
+}
+
+.msg-pago-exitoso .btn-cerrar-dialog button {
+    border: 0;
+    margin: 20px 0;
+    padding: 10px 60px;
+    background-color: #042dd1;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}

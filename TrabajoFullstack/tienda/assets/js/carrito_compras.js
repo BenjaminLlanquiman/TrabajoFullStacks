@@ -2,8 +2,6 @@
 // Se obtiene localStorage.
 let peliculasCarrito = JSON.parse(localStorage.getItem("carritoProductos"));
 
-console.log(peliculasCarrito);
-
 if(peliculasCarrito === null) {
     peliculasCarrito = [];
 }
@@ -41,7 +39,6 @@ const crearProdContainer = (id, titulo, descripcion, precio, imgSrc, imgAlt) => 
 // Funcion para mostrar mensaje de carrito vacio.
 // Si al cargar la pagina no hay elementos en el carrito,
 // con este evento se muestra el mensaje del carrito vacio.
-
 const msgCarritoVacio = () => {
     const pagMensajeCarritoVacio = document.querySelector(".pagina-carrito-vacio");
     const totalPagoContainer = document.querySelector(".total-pago");
@@ -175,17 +172,46 @@ btnsEliminar.forEach(
                 // Se actualiza carrito (localStorage)
                 localStorage.setItem("carritoProductos", JSON.stringify(peliculasCarrito));
 
-                // Se actualiza el costo total.
-                actualizarCostoTotal();
-
                 // Se actualiza contador del carrito
                 actualizarCarritoNavbar();
 
+                // Se actualiza el costo total.
+                actualizarCostoTotal();
+
                  // Se muestra el mensaje del carrito vacio si es que no hay elementos en el localStorage
                 msgCarritoVacio();
+
+                if(peliculasCarrito.length === 0) {
+                    localStorage.clear();
+                }
+
             }
         );
     }
 );
 
+// Mensaje de pago exitoso al clickear boton 'pagar'.
+const btnPagar = document.querySelector(".btn-pagar-container button");
+const mensajePagoExitoso = document.querySelector(".msg-pago-exitoso");
+const btnCerrarDialog = document.querySelector(".btn-cerrar-dialog button");
+
+btnPagar.addEventListener(
+    "click",
+    () => {
+        mensajePagoExitoso.showModal();
+    }
+);
+
+btnCerrarDialog.addEventListener(
+    "click",
+    () => {
+        mensajePagoExitoso.close();
+
+        // Se limpia el carrito
+        localStorage.clear();
+
+        // Se recarga la pagina para una limpieza completa
+        window.location.reload();
+    }
+);
 
