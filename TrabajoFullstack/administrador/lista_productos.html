@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/lista_productos.css">
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <div class="wrapper-container">
+        <aside class="sidebar-menu">
+            <p>Nombre página</p>
+            <nav>
+                <ul>
+                    <li><a href="./home_admin.html">Home</a></li>
+                    <li><a href="./lista_usuarios.html">Usuarios</a></li>
+                    <li><a href="./lista_productos.html">Productos</a></li>
+                    <li><a class="btn-salir" href="../tienda/inicio_sesion.html">Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="main-container">
+
+            <h1>productos</h1>
+
+            <div class="btn-container-agregar">
+                <a href="./nuevo_producto.html">+ Nuevo producto</a>
+            </div>
+
+            <table class="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Stock Crítico</th>
+                        <th>Categoría</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ACC001</td>
+                        <td>Rápido y Furioso</td>
+                        <td>Una emocionante carrera de autos y acción.</td>
+                        <td>$15.99</td>
+                        <td>50</td>
+                        <td>10</td>
+                        <td>Acción</td>
+                        <td>rapido_furioso.jpeg</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="./modificar_producto.html" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>COM002</td>
+                        <td>La Vida es Bella</td>
+                        <td>Una conmovedora historia de amor y esperanza.</td>
+                        <td>$12.50</td>
+                        <td>30</td>
+                        <td>5</td>
+                        <td>Comedia</td>
+                        <td>vida_bella.jpeg</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>THR003</td>
+                        <td>El Silencio de los Inocentes</td>
+                        <td>Un thriller psicológico que atrapa al espectador.</td>
+                        <td>$18.00</td>
+                        <td>20</td>
+                        <td>3</td>
+                        <td>Thriller</td>
+                        <td>silencio_inocentes.jpeg</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ACC004</td>
+                        <td>Mad Max: Furia en la Carretera</td>
+                        <td>Una aventura post-apocalíptica llena de acción.</td>
+                        <td>$14.99</td>
+                        <td>40</td>
+                        <td>8</td>
+                        <td>Acción</td>
+                        <td>mad_max.jpeg</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>COM005</td>
+                        <td>Superbad</td>
+                        <td>Una comedia sobre la amistad y la adolescencia.</td>
+                        <td>$10.00</td>
+                        <td>25</td>
+                        <td>6</td>
+                        <td>Comedia</td>
+                        <td>superbad.jpeg</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+
+    <script src="./assets/js/lista_productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* Fuente de texto */
+/* Enlace: https://fonts.google.com/specimen/Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Defino variable CSS (custom property) para fuente Poppins */
+:root {
+    --poppins-font: "Poppins", sans-serif;
+}
+
+/* Reset CSS para navegadores */
+/* Fuente: https://www.youtube.com/shorts/2lyDv0wOQuQ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--poppins-font);
+}
+
+
+/*
+=====================
+      NAVBAR
+=====================
+*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+    background-color: #e8e8e8;
+}
+
+.navbar p {
+    margin: 0;
+}
+
+.navbar .nombre-pagina {
+    font-weight: 800;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #042dd1;
+}
+
+.navbar ul li a:hover {
+    background-color: #042dd1;
+    color: white;
+}
+
+/*
+=====================
+     FORMULARIO
+=====================
+*/
+
+/* Formulario de registro de usuario */
+.main-container {
+    margin: 90px 300px;
+    padding: 50px 90px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: -13px 9px 10px #cfcdcd; /* Crea efecto de sombra en contenedor del formulario */
+}
+
+.main-container h1 {
+    text-align: center;
+    color: #f4f4f4;
+    margin: 0 0 50px 0;
+    background-color: #999999;
+    padding: 15px 0;
+}
+
+/* Inputs, label, fieldsets */
+
+.formulario-registro input:not(fieldset[name="ubicacion"] input), .formulario-registro label {
+    display: block;
+}
+
+.formulario-registro input:not(input[type='date']), .formulario-registro fieldset select {
+    width: stretch;
+}
+
+.formulario-registro input:not(input[type="date"]) {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+}
+
+.formulario-registro input[type="date"] {
+    padding: 10px;
+}
+
+.formulario-registro label:not(label[for='run']) {
+    margin: 15px 0 7px;
+}
+
+.formulario-registro label[for='run'] {
+    margin-bottom: 7px;
+}
+
+.formulario-registro fieldset {
+    padding: 15px 15px;
+}
+
+.formulario-registro fieldset[name="nombre-usuario"] input[name="nombre"] {
+    margin-bottom: 20px;
+}
+
+.formulario-registro fieldset {
+    margin-top: 15px;
+}
+
+.formulario-registro label {
+    padding-left: 5px;
+}
+
+.formulario-registro label, .formulario-registro fieldset legend, .formulario-registro button[type="submit"] {
+    text-transform: uppercase;
+}
+
+.formulario-registro label span {
+    text-transform: capitalize;
+}
+
+.formulario-registro fieldset[name='ubicacion'] select {
+    padding: 5px;
+}
+
+.formulario-registro fieldset[name='ubicacion'] select[name='regiones'], .formulario-registro fieldset[name='ubicacion'] input {
+    margin-bottom: 15px;
+}
+
+
+/* Mensaje de error en inputs obligatorios */
+.msg-error {
+    display: none;
+    visibility: hidden;
+    font-size: 14px;
+    color: #d2042d; 
+    margin-left: 5px;
+}
+
+/* Esta clase se agrega con Javascript
+   para mostrar los mensajes de error */
+.activo {
+    display: block;
+    visibility: visible;
+}
+
+/* Boton de registro */
+
+.formulario-registro .btn-container {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.btn-container button {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding: 20px 50px;
+    background-color: #d2042d;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 0;
+    transition: background-color 0.3s ease-in;
+}
+
+.btn-container button:hover {
+    background-color: #d34562;
+}
+
+
+/* Mensaje de exito (contenedor toast) */
+.msg-toast {
+    visibility: hidden;
+    position: fixed;
+    width: 20%;
+    padding: 20px 15px;
+    border: 2px solid #6d89f9;
+    border-radius: 10px;
+    color: white;
+    right: -33vw;
+    bottom: 5vh;
+    background-color: #042dd1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, right 0.2s ease-in-out;
+}
+
+.msg-toast p {
+    margin: 0;
+}
+
+.msg-toast p span {
+    font-weight: bold;
+}
+
+.exito {
+    visibility: visible;
+    right: 3vw;
+    opacity: 1;
+}
+
+

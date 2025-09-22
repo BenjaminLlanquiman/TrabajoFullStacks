@@ -1,0 +1,147 @@
+/* Fuente de texto */
+/* Enlace: https://fonts.google.com/specimen/Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Defino variable CSS (custom property) para fuente Poppins */
+:root {
+    --poppins-font: "Poppins", sans-serif;
+}
+
+/* Reset CSS para navegadores */
+/* Fuente: https://www.youtube.com/shorts/2lyDv0wOQuQ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--poppins-font);
+}
+
+
+/*
+=====================
+      NAVBAR
+=====================
+*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 30px;
+    background-color: #e8e8e8;
+}
+
+.navbar p {
+    margin: 0;
+}
+
+.navbar .nombre-pagina {
+    font-weight: 800;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #042dd1;
+}
+
+.navbar ul li a:hover {
+    background-color: #042dd1;
+    color: white;
+}
+
+
+/*
+=====================
+     PRODUCTOS
+=====================
+*/
+
+.main-container {
+    margin: 0 60px;
+}
+
+.main-container h1 {
+    margin: 0;
+    text-align: center;
+    margin: 90px 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.producto-card {
+    background-color: #e8e8e8;
+    border: 1px solid #bfbfbf;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.producto-card img {
+    height: 320px;
+    width: 100%;
+}
+
+.producto-card a {
+    text-decoration: none;
+}
+
+.producto-card .prod-titulo {
+    margin: 30px 20px 0;
+}
+
+.producto-card .ancla-img {
+    display: block;
+}
+
+.producto-card p {
+    margin: 30px 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.producto-card .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.producto-card button {
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: #d2042d;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 70px;
+}
+

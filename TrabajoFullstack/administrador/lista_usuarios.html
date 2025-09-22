@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/lista_usuarios.css">
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <div class="wrapper-container">
+        <aside class="sidebar-menu">
+            <p>Nombre página</p>
+            <nav>
+                <ul>
+                    <li><a href="./home_admin.html">Home</a></li>
+                    <li><a href="./lista_usuarios.html">Usuarios</a></li>
+                    <li><a href="./lista_productos.html">Productos</a></li>
+                    <li><a class="btn-salir" href="../tienda/inicio_sesion.html">Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="main-container">
+
+            <h1>usuarios</h1>
+
+            <div class="btn-container-agregar">
+                <a href="./registro_usuario.html">+ Nuevo usuario</a>
+            </div>
+
+            <table class="tabla-usuarios">
+                
+                <thead>
+                    <tr>
+                        <th scope="col">RUN</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Región</th>
+                        <th scope="col">Comuna</th>
+                        <th scope="col">Tipo de Usuario</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678K</td>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>juan.perez@duoc.cl</td>
+                        <td>Avenida Libertador 1234</td>
+                        <td>Metropolitana de Santiago</td>
+                        <td>Santiago</td>
+                        <td>Cliente</td>
+                        <td>15/05/1990</td>
+                        <td>912345678</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="./modificar_usuario.html" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>876543211</td>
+                        <td>María</td>
+                        <td>González</td>
+                        <td>maria.gonza@gmail.com</td>
+                        <td>Calle Los Olmos 5678</td>
+                        <td>Coquimbo</td>
+                        <td>La Serena</td>
+                        <td>Vendedor</td>
+                        <td>22/11/1985</td>
+                        <td></td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>234567898</td>
+                        <td>Carlos</td>
+                        <td>Fernández</td>
+                        <td>carlos.ferna@profesor.duoc.cl</td>
+                        <td>Pasaje El Sol 4321</td>
+                        <td>Los Ríos</td>
+                        <td>Valdivia</td>
+                        <td>Administrador</td>
+                        <td>30/01/1980</td>
+                        <td>987654321</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>34567890K</td>
+                        <td>Lucía</td>
+                        <td>Martínez</td>
+                        <td>lucia.marti@gmail.com</td>
+                        <td>Calle La Paz 9876</td>
+                        <td>Magallanes y la Antártica Chilena</td>
+                        <td>Punta Arenas</td>
+                        <td>Cliente</td>
+                        <td></td>
+                        <td></td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>456789014</td>
+                        <td>Andrés</td>
+                        <td>Lopez</td>
+                        <td>andres.lopez@duoc.cl</td>
+                        <td>Av. Los Ríos 123</td>
+                        <td>Arica y Parinacota</td>
+                        <td>Arica</td>
+                        <td>Vendedor</td>
+                        <td>05/09/1995</td>
+                        <td>923456789</td>
+                        <td class="botones-container">
+                            <div class="botones">
+                                <a href="#" class="editar">Editar</a>
+                                <button class="eliminar">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </div>
+
+    <script src="./assets/js/lista_usuarios.js"></script>
+</body>
+</html>

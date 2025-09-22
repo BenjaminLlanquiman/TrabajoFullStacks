@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/home_tienda.css">
+    <title>Home - Página Principal</title>
+</head>
+<body>
+     <nav class="navbar">
+        <p class="nombre-pagina">Nombre pagina</p>
+        <ul>
+            <li><a href="./home_tienda.html">Home</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</p>
+    </nav>
+
+    <article class="main-container">
+        <div class="usuario-container">
+            <ul>
+                <li><a href="./inicio_sesion.html">Iniciar sesión</a></li>
+                <li><a href="./registro_usuario.html">Registrar usuario</a></li>
+            </ul>
+        </div>
+
+        <header class="banner-pagina">
+            <div class="descripcion-container">
+                <h1>Tienda Online</h1>
+
+                <p>Bienvenido a Nombre Página, tu destino definitivo para explorar y adquirir las mejores películas del momento. Aquí, te ofrecemos una amplia selección de títulos que abarcan los géneros de acción, comedia y thrillers.</p>
+
+                <div class="btn-explorar-prod">
+                    <a href="./productos.html">Explorar catálogo</a>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de la tienda">
+        </header>
+
+        <section class="productos-recomendados">
+            <div class="producto-card">
+                <a class="ancla-img" href="./detalle_producto.html">
+                    <img src="./assets/img/fast-furious-poster.jpg" alt="Imagen Rapido y Furioso">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="./detalle_producto.html">Rápido y Furioso: Reto Tokio</a>
+                </div>
+                <p>$1000</p>
+            </div>
+
+            <div class="producto-card">
+                <a class="ancla-img" href="#">
+                    <img src="./assets/img/matilda-poster.jpg" alt="Imagen poster Matilda">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="#">Matilda</a>
+                </div>
+                <p>$1000</p>
+            </div>
+
+            <div class="producto-card">
+                <a class="ancla-img" href="#">
+                    <img src="./assets/img/seven-poster.jpg" alt="Imagen poster Seven">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="#">Los Siete Pecados Capitales</a>
+                </div>
+                <p>$1000</p>
+            </div>
+
+            <div class="producto-card">
+                <a class="ancla-img" href="#">
+                    <img src="./assets/img/mad-max-poster.jpg" alt="Imagen poster Mad Max">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="#">Mad Max: Furia en la carretera</a>
+                </div>
+                <p>$1000</p>
+            </div>
+
+            <div class="producto-card">
+                <a class="ancla-img" href="#">
+                    <img src="./assets/img/superbad-poster.jpg" alt="Imagen poster SuperBad">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="#">SuperBad</a>
+                </div>
+                <p>$1000</p>
+            </div>
+        </section>
+    </article>
+
+    <footer>
+        <p>Nombre tienda</p>
+        <p>@2025</p>
+    </footer>
+</body>
+</html>

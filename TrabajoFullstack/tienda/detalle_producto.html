@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/detalle_producto.css" media="all">
+    <title>Detalle Producto</title>
+</head>
+<body>
+     <nav class="navbar">
+        <p class="nombre-pagina">Nombre pagina</p>
+        <ul>
+            <li><a href="./home_tienda.html">Home</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (<span class="cant-pedido"></span>)</p>
+    </nav>
+
+    <article class="main-container">
+        <img src="./assets/img/seven-poster.jpg" alt="Imagen de poster de Seven">
+
+        <section class="detalle-producto">
+            <h1>
+                <span class="titulo-pelicula">Se7en: Los siete pecados capitales</span> <span class="precio">$1000</span>
+            </h1>
+
+            <p>Dos detectives, protagonizados por Morgan Freeman y Brad Pitt, investigan una serie de asesinatos relacionados con los siete pecados capitales.</p>
+
+            <div class="cantidad-container">
+                <p>Cantidad</p>
+
+                <div class="cantidad-container">
+                    <button class="restar">-</button>
+                    <input class="num-cantidad" type="number" name="num-cantidad" min="1" value="1" readonly>
+                    <button class="sumar">+</button>
+                </div>
+            </div>
+
+            <div class="btn-agregar-container">
+                <button>Añadir al carrito</button>
+            </div>
+        </section>
+    </article>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/modificar_producto.css">
+    <title>Modificar Producto</title>
+</head>
+<body>
+    <div class="wrapper-container">
+        <aside class="sidebar-menu">
+            <p>Nombre página</p>
+            <nav>
+                <ul>
+                    <li><a href="./home_admin.html">Home</a></li>
+                    <li><a href="./lista_usuarios.html">Usuarios</a></li>
+                    <li><a href="./lista_productos.html">Productos</a></li>
+                    <li><a class="btn-salir" href="../tienda/inicio_sesion.html">Salir</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+         <article class="main-container">
+            <h1>Modificar Producto</h1>
+
+            <form class="formulario-registro">
+                <label for="codigo-prod">código</label>
+                <span class="msg-error">Código inválido: Debe tener 3 o más caracteres.</span>
+                <input id="codigo-prod" type="text" name="codigo-prod" placeholder="Ej: A25" value="ACC001" required>
+
+                <fieldset name="nombre-usuario">
+                    <legend>producto</legend>
+
+                    <span class="msg-error">Debe ingresar el nombre del producto.</span>
+                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" value="Rápido y Furioso" required>
+
+                    <span class="msg-error no-obligatorio"></span>
+                    <input id="descripcion" type="text" name="descripcion" placeholder="Descripción (Opcional)">
+                </fieldset>
+
+
+                <label for="precio">precio</label>
+                <span class="msg-error">Precio inválido: Debe ser positivo (mayor o igual a cero).</span>
+                <input id="precio" type="text" name="precio" required>
+
+                <label for="stock">stock</label>
+                <span class="msg-error">Stock inválido: No use decimales. Debe ser positivo (mayor o igual a cero).</span>
+                <input id="stock" type="text" name="stock" required>
+
+                <label for="stock-critico">stock crítico (<span>opcional</span>)</label>
+                <span class="msg-error no-obligatorio">Stock crítico inválido: No use decimales. Debe ser positivo (mayor o igual a cero).</span>
+                <input id="stock-critico" type="text" name="stock-critico">
+
+                <label for="categoria">categoría</label>
+                <span class="msg-error msg-select">Debe elegir una categoría.</span>
+                <select id="categoria" name="categoria" required>
+                    <option value="" disabled>-- Seleccione una categoria --</option>
+                    <option value="accion" selected>Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="thriller">Thriller</option>
+                </select>
+
+                <label for="img-prod">imagen (<span>opcional</span>)</label>
+                <input id="img-prod" type="file" name="img-prod" accept="image/jpeg, image/png"/>
+                
+                
+                <div class="btn-container">
+                    <button type="submit">registrar</button>
+                </div>
+
+            </form>
+        </article>
+    </div>
+
+    <!-- Contenedor 'toast': Aparecera cuando se ha enviado exitosamente el formulario -->
+    <div class="msg-toast">
+        <p>El producto
+            <span></span>
+             se ha registrado con éxito.
+        </p>
+    </div>
+
+    <script src="./assets/js/modificar_producto.js"></script>
+</body>
+</html>

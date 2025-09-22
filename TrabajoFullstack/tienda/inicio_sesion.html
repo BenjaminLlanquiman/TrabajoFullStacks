@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/inicio_sesion.css">
+    <title>Inicio de Sesión</title>
+</head>
+<body>
+    <nav class="navbar">
+        <p class="nombre-pagina">Nombre pagina</p>
+        <ul>
+            <li><a href="./home_tienda.html">Home</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</p>
+    </nav>
+
+    <article class="main-container">
+    
+        <div class="empresa-container">
+            <img src="https://images.unsplash.com/vector-1739891192763-8d96e834b532?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de la empresa">
+    
+            <h1>Nombre empresa</h1>
+        </div>
+    
+        <form class="formulario-login">
+            <h2>Iniciar sesión</h2>
+    
+            <label for="tipo-usuario">tipo de usuario</label>
+            <span class="msg-error msg-t-usuario">Debe elegir su tipo de usuario.</span>
+            <select id="tipo-usuario" name="tipo-usuario" required>
+                <option value=""disabled selected>-- Seleccione su tipo de usuario. --</option>
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+                <option value="cliente">Cliente</option>
+            </select>
+    
+            <label for="correo">correo</label>
+            <span class="msg-error msg-correo">Correo inválido: Debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.</span>
+            <input id="correo" type="email" name="correo" placeholder="Ej: pia@duoc.cl" required>
+    
+            <label for="password">contraseña</label>
+            <span class="msg-error msg-pass">Contraseña inválida: Debe contener entre 4 a 10 caracteres.</span>
+            <input id="password" type="password" name="password" required>
+    
+            <div class="btn-container">
+                <button type="submit">Iniciar Sesión</button>
+            </div>
+        </form>
+    
+    </article>
+
+    <!-- Contenedor 'toast': Aparecera cuando se ha enviado exitosamente el formulario -->
+    <div class="msg-toast">
+        <p>Ha iniciado sesión con éxito.</p>
+    </div>
+
+    <script src="./assets/js/inicio_sesion.js"></script>
+</body>
+</html>

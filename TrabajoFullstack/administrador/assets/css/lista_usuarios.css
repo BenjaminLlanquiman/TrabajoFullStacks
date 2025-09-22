@@ -1,0 +1,172 @@
+
+/* Fuente de texto */
+/* Enlace: https://fonts.google.com/specimen/Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Defino variable CSS (custom property) para fuente Poppins */
+:root {
+    --poppins-font: "Poppins", sans-serif;
+}
+
+/* Reset CSS para navegadores */
+/* Fuente: https://www.youtube.com/shorts/2lyDv0wOQuQ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--poppins-font);
+}
+
+
+/*
+=====================
+      SIDEBAR
+=====================
+*/
+
+.wrapper-container {
+    display: flex;
+}
+
+.sidebar-menu {
+    background-color: #e8e8e8;
+    min-height: 100vh;
+    padding: 0 30px;
+}
+
+.sidebar-menu p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 40px 0 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.sidebar-menu nav {
+    margin-top: 25px;
+}
+
+.sidebar-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu ul li {
+    list-style-type: none;
+}
+
+.sidebar-menu ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.sidebar-menu ul li a:not(.btn-salir) {
+    color: #042dd1;
+    padding: 15px 50px;
+}
+
+.sidebar-menu .btn-salir {
+    padding: 7px 50px;
+    background-color: #d2042d;
+    color: white;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.sidebar-menu ul li a:not(.btn-salir):hover {
+    background-color: #042dd1;
+    color: white;
+}
+
+
+/*
+=====================
+      TABLA
+=====================
+*/
+/*
+.main-container {
+    padding: 0 30px;
+}
+*/
+
+.btn-container-agregar {
+    margin-bottom: 30px;
+}
+
+.btn-container-agregar a {
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #02cf06;
+    color: white;
+    text-decoration: none;
+}
+
+.main-container h1 {
+    margin: 0;
+    text-align: center;
+    margin: 50px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.tabla-usuarios {
+    margin: 0 30px 50px;
+}
+
+.tabla-usuarios tr {
+    text-align: center;
+}
+
+.tabla-usuarios thead tr {
+    background-color: #515151;
+    color: white;
+}
+
+.tabla-usuarios tbody tr:nth-child(2n - 1) {
+    background-color: #e8e8e8;
+}
+
+.tabla-usuarios .botones-container {
+    background-color: white;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+}
+
+.botones button, .botones a {
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+}
+
+.botones .editar {
+    text-decoration: none;
+    margin: 0 12px;
+    background-color: #042dd1;
+}
+
+.botones .eliminar {
+    background-color: #d2042d;
+    cursor: pointer;
+    border: 0;
+}

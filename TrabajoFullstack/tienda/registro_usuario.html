@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/registro_usuario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <nav class="navbar">
+        <p class="nombre-pagina">Nombre pagina</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</p>
+    </nav>
+
+    <article class="main-container">
+        <h1>Registro de Usuario</h1>
+
+        <form class="formulario-registro">
+            <label for="run">run</label>
+            <span class="msg-error">RUN inválido: No debe contener puntos ni guión. Si no es el caso, revise si lo escribió correctamente.</span>
+            <input id="run" type="text" name="run" placeholder="Ej: Si 12.345.678-k, entonces 12345678k" required>
+
+            <fieldset name="nombre-usuario">
+                <legend>nombre completo</legend>
+
+                <span class="msg-error">Debe ingresar el nombre.</span>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+
+                <span class="msg-error">Debe ingresar el (los) apellido(s).</span>
+                <input id="apellidos" type="text" name="apellidos" placeholder="Apellidos" required>
+            </fieldset>
+
+
+            <label for="correo">correo</label>
+            <span class="msg-error">Correo inválido: Debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.</span>
+            <input id="correo" type="email" name="correo" placeholder="Ej: pia@duoc.cl" required>
+
+            <label for="password">contraseña</label>
+            <span class="msg-error">Contraseña inválida: Debe contener entre 4 a 10 caracteres.</span>
+            <input id="password" type="password" name="password" required>
+
+            <label for="confirm-pass">confirmar contraseña</label>
+            <span class="msg-error">La contraseña no coincide con la ingresada en el campo anterior.</span>
+            <input id="confirm-pass" type="password" name="confirm-pass" required>
+
+            <fieldset name="ubicacion">
+                <legend>ubicación</legend>
+
+                <span class="msg-error">Debe ingresar una dirección.</span>
+                <input id="direccion" type="email" name="direccion" placeholder="Dirección" required>
+
+                <span class="msg-error">Debe elegir una región y una comuna.</span>
+
+                <select id="regiones" name="regiones" required>
+                    <option value="" disabled selected>-- Seleccione la región --</option>
+                    <option value="arica">Arica y Parinacota</option>
+                    <option value="coquimbo">Coquimbo</option>
+                    <option value="metropolitana">Metropolitana de Santiago</option>
+                    <option value="losRios">Los Ríos</option>
+                    <option value="magallanes">Magallanes y de la Antártica Chilena</option>
+                </select>
+
+                <select id="comunas" name="comunas" disabled required>
+                    <option value="" disabled selected>-- Seleccione la comuna --</option>
+                </select>
+            </fieldset>
+
+
+            <label for="fecha-nac">fecha de nacimiento (<span>opcional</span>)</label>
+            <input id="fecha-nac" type="date" name="fecha-nac">
+
+            <label for="telefono">teléfono (<span>opcional</span>)</label>
+            <span class="msg-error">Teléfono inválido: No incluyas el "+56". Son 9 dígitos (el primero es mayor o igual a 2).</span>
+            <input id="telefono" type="tel" name="telefono" placeholder="Ej: 234567891">
+
+            <div class="btn-container">
+                <button type="submit">registrar</button>
+            </div>
+
+        </form>
+    </article>
+
+    <!-- Contenedor 'toast': Aparecera cuando se ha enviado exitosamente el formulario -->
+    <div class="msg-toast">
+        <p>El usuario
+            <span></span>
+             se ha registrado con éxito.
+        </p>
+    </div>
+
+    <script src="./assets/js/registro_usuario.js"></script>
+</body>
+</html>
