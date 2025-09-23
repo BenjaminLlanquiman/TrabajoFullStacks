@@ -10,16 +10,16 @@
 </head>
 <body>
     
-</body>
- <nav class="navbar">
-        <p class="nombre-pagina">Nombre pagina</p>
-        <ul>
-            <li><a href="./home_tienda.html">Home</a></li>
-            <li><a href="./productos.html">Productos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="./contacto_tienda.html">Contacto</a></li>
-        </ul>
+
+    <nav class="navbar">
+            <p class="nombre-pagina">Nombre pagina</p>
+                <ul>
+                    <li><a href="./home_tienda.html">Home</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="./blogs.html">Blogs</a></li>
+                    <li><a href="./contacto_tienda.html">Contacto</a></li>
+                </ul>
         <p class="carrito"><a href="./carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span class="cant-pedido"></span>)</a></p>
     </nav>
 
@@ -34,37 +34,32 @@
             <form class="formulario-contacto">
                 <h2>Formulario de contactos</h2>
     
-                <label for="tipo-usuario">Nombre Usuario</label>
-                <span class="msg-error">Debe ingresar el nombre.</span>
-                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                <label for="nombre">Nombre Usuario</label>
+                <span id="error-nombre" class="msg-error">Debe ingresar el nombre.</span>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre"  aria-describedby="error-nombre"required>
          
                 <label for="correo">correo</label>
                 <span class="msg-error msg-correo">Correo inválido: Debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.</span>
-                <input id="correo" type="email" name="correo" placeholder="Ej: pia@duoc.cl" required>
+                <input id="correo" type="email" name="correo" placeholder="Ej: pia@duoc.cl">
     
-                <label for="password">Contenido</label>
-                <span class="msg-error msg-pass">solo se permite 600 caracteres.</span>
-                <textarea id="contenido" placeholder="Mensaje" class="contenido"></textarea>
+                <label for="contenido">Contenido</label>
+                <span class="msg-error msg-pass">solo se permite 500 caracteres.</span>
+                <textarea id="contenido" name="contenido" placeholder="Mensaje" class="contenido" required></textarea>
                 
-    
-           
-    
                 <div class="btn-container">
                 <button type="submit">Enviar Mensaje</button>
                 </div>
              </form>
         </article>      
-
-        <footer>
-            <p>Nombre tienda</p>
-            <p>@2025</p>
-        </footer>
  
-
-   <div class="msg-toast">
-        <p>
-            el mensaje se ha enviado correctamente
-        </p>
+    <div class="msg-toast">
+        <p>el mensaje se ha enviado correctamente</p>
     </div>
-    <script src="./assets/js/registro_usuario.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./assets/js/contacto_tienda.js"></script>
+</body>
 </html>

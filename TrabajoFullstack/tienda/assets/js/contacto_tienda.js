@@ -13,12 +13,21 @@ const actualizarCarritoNavbar = () => {
 
 actualizarCarritoNavbar(); // Para actualizarlo al refrescar la pagina
 
+const textarea = document.querySelector("#contenido");
+const maxContenido = 500;
 
 const inputsObligatorios = document.querySelectorAll("input[required]");
-
 const btnEnviar = document.querySelector(".btn-container button");
 
 const msgsError = document.querySelectorAll(".msg-error");
+const msgsErrorOriginales = Array.from(msgsError).map(msg => msg.textContent);
+
+const correoInput = document.querySelector("input[name='correo']");
+const msgErrorCorreo = document.querySelector(".msg-correo");
+const msgCorreoOriginal = msgErrorCorreo.textContent;
+
+const msgErrorTextarea = document.querySelector(".msg-pass");
+const msgErrorTextareaOriginal = msgErrorTextarea.textContent;
 
 const estaVacio = (input) => {
     input.value = input.value.trim(); // Se quitan los espacios en blanco al inicio y al final del string
@@ -33,7 +42,7 @@ const validaCorreo = (input) => {
     input.value = input.value.toLowerCase();
     const dominiosValidos = ["@duoc.cl", "@profesor.duoc.cl", "@gmail.com"];
 
-    return dominiosValidos.some(elem => input.value.includes(elem));
+    return dominiosValidos.some(Element => input.value.includes(Element));
 
 }
 
@@ -51,6 +60,11 @@ btnEnviar.addEventListener(
         evento.preventDefault();
 
         let hayErrores = false;
+
+         // Limpiar errores antes de validar
+            msgsError.forEach(msg => msg.classList.remove("activo"));
+            msgErrorTextarea.classList.remove("activo");
+            msgErrorCorreo.classList.remove("activo");
 
         
         // Validacion si los inputs tienen valores o no.
@@ -87,6 +101,44 @@ btnEnviar.addEventListener(
             }
         }
 
+	// Validacion correo
+	let esCorreoValido = validaCorreo(correoInput);
+        const correoAlcanzoMaximo = superaMaxCaracteres(correoInput, 100);
+
+	msgErrorCorreo.classList.remove("activo");
+
+	if(!esCorreoValido) {
+	    msgErrorCorreo.classList.add("activo");
+        
+            hayErrores = true;
+	}
+
+	if(correoAlcanzoMaximo) {
+            msgErrorCorreo.textContent = "Se superaron los 100 caracteres.";
+            hayErrores = true;
+        } else {
+            msgErrorCorreo.textContent = msgCorreoOriginal;
+        }
+
+	
+
+         // --- ValidaciÃ³n del textarea ---
+         msgErrorTextarea.classList.remove("activo");
+
+        if (textarea.value.trim().length === 0) {
+            msgErrorTextarea.textContent = "Debe ingresar un contenido.";
+            msgErrorTextarea.classList.add("activo");
+            hayErrores = true;
+            
+        } else if (textarea.value.length > maxContenido) {
+            msgErrorTextarea.textContent = "No puede superar los 500 caracteres.";
+            msgErrorTextarea.classList.add("activo");
+            hayErrores = true;
+
+        } else {
+            msgErrorTextarea.textContent = msgsErrorTextareaOriginal; // restaura el mensaje original
+        }
+
      
         // Si no se encuentran errores, se ejecuta este bloque
         if(!hayErrores) {
@@ -95,14 +147,18 @@ btnEnviar.addEventListener(
             const msgExitoToast = document.querySelector(".msg-toast");
 
             msgExitoToast.classList.add("exito");
+            formulario.reset();
 
             // Despues de 3 segundos (3000 ms), el mensaje de exito desaparece
+            alert("El mensaje ha sido enviado exitosamente");
+            
             setTimeout(
                 () => {
                     msgExitoToast.classList.remove("exito");
                 },
-                2000
-            );
+                2000);
+
+
 
 
 
@@ -110,5 +166,4 @@ btnEnviar.addEventListener(
         }
 
         return;
-    }
-);
+});
