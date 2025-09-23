@@ -1,0 +1,41 @@
+/* Fondo general y espaciado */
+.nosotros {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+/* Contenedor central reutilizando proporciones de .main-container */
+.nosotros-contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Imagen con estilo similar a .blog-item img */
+.nosotros-contenido img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal con estilo similar a .blog-item h2 */
+.nosotros-contenido h1 {
+    font-size: 1.8rem;
+    color: #042dd1;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Párrafos con estilo similar a .blog-item p */
+.nosotros-contenido p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
