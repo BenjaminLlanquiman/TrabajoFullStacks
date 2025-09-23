@@ -257,3 +257,28 @@ body {
     opacity: 1;
 }
 
+/*
+==============
+    FOOTER
+==============
+*/
+
+footer {
+    background-color: #e8e8e8;
+    padding: 50px 0;
+    margin: 90px 0 0 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+footer p:first-child {
+    margin: 0 0 7px;
+}
+
+footer p:nth-child(2) {
+    margin: 0;
+}

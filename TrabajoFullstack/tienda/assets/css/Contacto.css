@@ -15,11 +15,13 @@
 /* da el ancho del formulario*/
 .main-container {
     margin: 0 30px;
+    
 }
 
-/* da el espacioel nombre de la empresa y formulario*/
+/* da el espacio del nombre de la empresa y formulario*/
 .main-container h1 {
     margin: 20px 0 0;
+    
 }
 
 /* le da el tamaño ideal a la imagen */
@@ -52,6 +54,13 @@
     margin-left: 5px;
 }
 
+/* Esta clase se agrega con Javascript
+   para mostrar los mensajes de error */
+.activo {
+    display: block;
+    visibility: visible;
+}
+
 /* le da tamaño, color y fondo a el nombre de formulario de contacto  */
 .formulario-contacto h2 {
     text-align: center;
@@ -79,14 +88,15 @@
     outline: none;
 }
 .contenido {
-    width: 100%;
-    max-width: 900px;
+
+    width: stretch;
     border-radius: 20px;
     padding: 20px 30px;
     border: 0;
     outline: none;
     box-sizing: border-box;
-     resize: none;
+    resize: none;
+    display: block;
 }
 
 
@@ -114,6 +124,10 @@
     border-radius: 30px;
     border: 0;
     transition: background-color 0.3s ease-in;
+}
+
+.btn-container button:hover {
+    background-color: #d34562;
 }
 
 /* Mensaje de exito (contenedor toast) */
