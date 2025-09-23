@@ -47,6 +47,15 @@ body {
     margin: 0;
 }
 
+.navbar p a[href="./carrito_compras.html"] {
+    text-decoration: none;
+    color: #042dd1;
+}
+
+.navbar p a[href="./carrito_compras.html"]:hover {
+    opacity: 0.7;
+}
+
 .navbar .nombre-pagina {
     font-weight: 800;
 }

@@ -17,7 +17,7 @@
             <li><a href="#">Blogs</a></li>
             <li><a href="./contacto_tienda.html">Contacto</a></li>
         </ul>
-        <p class="carrito"><i class="fa-solid fa-cart-shopping"></i> Cart (0)</p>
+        <p class="carrito"><a href="./carrito_compras.html"><i class="fa-solid fa-cart-shopping"></i> Cart (<span class="cant-pedido"></span>)</a></p>
     </nav>
 
     <article class="main-container">
@@ -45,10 +45,20 @@
         <section class="productos-recomendados">
             <div class="producto-card">
                 <a class="ancla-img" href="./detalle_producto.html">
+                    <img src="./assets/img/seven-poster.jpg" alt="Imagen poster Seven">
+                </a>
+                <div class="prod-titulo">
+                    <a class="ancla-titulo-prod" href="./detalle_producto.html">Los Siete Pecados Capitales</a>
+                </div>
+                <p>$1000</p>
+            </div>
+
+            <div class="producto-card">
+                <a class="ancla-img" href="#">
                     <img src="./assets/img/fast-furious-poster.jpg" alt="Imagen Rapido y Furioso">
                 </a>
                 <div class="prod-titulo">
-                    <a class="ancla-titulo-prod" href="./detalle_producto.html">Rápido y Furioso: Reto Tokio</a>
+                    <a class="ancla-titulo-prod" href="#">Rápido y Furioso: Reto Tokio</a>
                 </div>
                 <p>$1000</p>
             </div>
@@ -59,16 +69,6 @@
                 </a>
                 <div class="prod-titulo">
                     <a class="ancla-titulo-prod" href="#">Matilda</a>
-                </div>
-                <p>$1000</p>
-            </div>
-
-            <div class="producto-card">
-                <a class="ancla-img" href="#">
-                    <img src="./assets/img/seven-poster.jpg" alt="Imagen poster Seven">
-                </a>
-                <div class="prod-titulo">
-                    <a class="ancla-titulo-prod" href="#">Los Siete Pecados Capitales</a>
                 </div>
                 <p>$1000</p>
             </div>
@@ -99,5 +99,7 @@
         <p>Nombre tienda</p>
         <p>@2025</p>
     </footer>
+    
+    <script src="./assets/js/home_tienda.js"></script>
 </body>
 </html>
